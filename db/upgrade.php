@@ -15,20 +15,29 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Plugin strings are defined here.
+ * Plugin upgrade steps are defined here.
  *
  * @package     local_townsquaresupport
- * @category    string
+ * @category    upgrade
  * @copyright   2024 Tamaro Walter
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+/**
+ * Execute block_townsquare upgrade from the given old version.
+ *
+ * @param int $oldversion
+ * @return bool
+ */
+function xmldb_local_townsquaresupport_upgrade($oldversion) {
+    global $DB;
 
-// Core strings for the installation.
-$string['pluginname'] = 'Townsquare support plugin';
-$string['pluginname'] = 'Townsquare support';
+    $dbman = $DB->get_manager();
 
-// Subplugin strings.
-$string['subplugintype_townsquaresupport'] = 'Supported module';
-$string['subplugintype_townsquaresupport_plural'] = 'Supported modules';
+    // For further information please read {@link https://docs.moodle.org/dev/Upgrade_API}.
+    //
+    // You will also have to create the db/install.xml file by using the XMLDB Editor.
+    // Documentation for the XMLDB Editor can be found at {@link https://docs.moodle.org/dev/XMLDB_editor}.
+
+    return true;
+}

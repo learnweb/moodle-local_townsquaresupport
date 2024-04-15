@@ -15,20 +15,18 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Plugin strings are defined here.
+ * Code to be executed after the plugin's database scheme has been installed is defined here.
  *
  * @package     local_townsquaresupport
- * @category    string
+ * @category    upgrade
  * @copyright   2024 Tamaro Walter
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+/**
+ * Custom code to be run on installing the plugin.
+ */
+function xmldb_local_townsquaresupport_install() {
 
-// Core strings for the installation.
-$string['pluginname'] = 'Townsquare support plugin';
-$string['pluginname'] = 'Townsquare support';
-
-// Subplugin strings.
-$string['subplugintype_townsquaresupport'] = 'Supported module';
-$string['subplugintype_townsquaresupport_plural'] = 'Supported modules';
+    return true;
+}
