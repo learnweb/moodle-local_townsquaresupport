@@ -22,7 +22,8 @@
  * Every module must:
  * - gather "events" for a user that can be transformed into letters.
  * - provide php_unit test to ensure the correct behaviour.
- * local_townsquaresupport will call this function of each subplugin. The townsquare block will then gather all events from local_townsquaresupport
+ * local_townsquaresupport will call this function of each subplugin.
+ * The townsquare block will then gather all events from local_townsquaresupport
  *
  * @package   local_townsquaresupport
  * @copyright 2024 Tamaro Walter

@@ -25,6 +25,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// Subplugin strings
+// Subplugin strings.
 $string['subplugintype_townsquaresupport'] = 'Supported module';
 $string['subplugintype_townsquaresupport_plural'] = 'Supported modules';
