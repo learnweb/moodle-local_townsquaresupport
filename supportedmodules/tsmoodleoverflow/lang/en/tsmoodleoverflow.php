@@ -14,25 +14,16 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace local_townsquaresupport;
-
-defined('MOODLE_INTERNAL') || die();
-
-use context_module;
-use dml_exception;
-
-global $CFG;
-require_once($CFG->dirroot . '/calendar/lib.php');
-require_once($CFG->dirroot . '/blocks/townsquare/locallib.php');
 /**
+ * Plugin strings for the townsquare subplugin for moodleoverflow support.
  *
+ * @package     block_ts_moodleoverflow
+ * @category    string
+ * @copyright   2024 Tamaro Walter
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-function townsquaresupport_get_subplugin_events() {
-    // Get all available subplugins.
-    $events = [];
-    $subplugins = \core_plugin_manager::instance()->get_plugins_of_type('supportedmodules');
-    var_dump($subplugins);
-    foreach ($subplugins as $subplugin) {
-        $events += $subplugin->get_events();
-    }
-}
+$string['pluginname'] = 'Moodleoverflow support for townsquare block';
+$string['pluginnameadding'] = "Adding a Moodleoverflow support subplugin";
+$string['pluginnameediting'] = "Editing a Moodleoverflow support subplugin";
+$string['pluginnamesummary'] = "This subplugin allows the townsquare block to show new posts from moodleoverflow.";
+$string['pluginname_help'] = 'This subplugin allows the townsquare block to show posts from moodleoverflow.';
