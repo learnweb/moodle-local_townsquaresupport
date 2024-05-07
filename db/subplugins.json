@@ -1,5 +1,5 @@
 {
   "plugintypes": {
-    "supportedmodules": "local/townsquaresupport/supportedmodules"
+    "townsquareexpansion": "local\/townsquaresupport\/townsquareexpansion"
   }
 }

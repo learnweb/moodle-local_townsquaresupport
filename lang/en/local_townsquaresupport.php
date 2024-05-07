@@ -30,5 +30,5 @@ $string['pluginname'] = 'Townsquare support plugin';
 $string['pluginname'] = 'Townsquare support';
 
 // Subplugin strings.
-$string['subplugintype_townsquaresupport'] = 'Supported module';
-$string['subplugintype_townsquaresupport_plural'] = 'Supported modules';
+$string['subplugintype_townsquareexpansion'] = 'Townsquare event expansion';
+$string['subplugintype_townsquareexpansion_plural'] = 'Townsquare event expansions';

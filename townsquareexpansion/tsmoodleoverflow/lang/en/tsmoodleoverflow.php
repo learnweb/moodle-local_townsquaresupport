@@ -17,7 +17,7 @@
 /**
  * Plugin strings for the townsquare subplugin for moodleoverflow support.
  *
- * @package     block_ts_moodleoverflow
+ * @package     townsquareexpansion_tsmoodleoverflow
  * @category    string
  * @copyright   2024 Tamaro Walter
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

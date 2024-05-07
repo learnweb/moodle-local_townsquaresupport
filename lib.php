@@ -18,21 +18,36 @@ namespace local_townsquaresupport;
 
 defined('MOODLE_INTERNAL') || die();
 
-use context_module;
-use dml_exception;
-
-global $CFG;
-require_once($CFG->dirroot . '/calendar/lib.php');
-require_once($CFG->dirroot . '/blocks/townsquare/locallib.php');
 /**
  *
  */
 function townsquaresupport_get_subplugin_events() {
-    // Get all available subplugins.
-    $events = [];
-    $subplugins = \core_plugin_manager::instance()->get_plugins_of_type('supportedmodules');
-    var_dump($subplugins);
-    foreach ($subplugins as $subplugin) {
-        $events += $subplugin->get_events();
-    }
+    // Get all available event from townsquaresupport subplugins.
+    /*$event = [
+        'courseid' => 2,
+        'modulename' => 'modulename',
+        'instancename' => 'instancename',
+        'content' => 'HALLO HALLO',
+        'timestart' => time(),
+        'coursemoduleid' => 1,
+        'eventtype' => 'eventtype'
+    ];
+    $event2 = [
+        'courseid' => 2,
+        'modulename' => 'modulename',
+        'instancename' => 'instancename',
+        'content' => 'HALLO TSCHAUUU',
+        'timestart' => time(),
+        'coursemoduleid' => 1,
+        'eventtype' => 'eventtype'
+    ];
+    $events = [$event, $event2];
+    //$subplugins = \core_plugin_manager::instance()->get_plugins_of_type('supportedmodules');
+    //var_dump($subplugins);
+    //foreach ($subplugins as $subplugin) {
+    //    $events += $subplugin->get_events();
+    //}
+    return $events;*/
+    $subplugins = \core_plugin_manager::instance()->get_plugins_of_type('townsquareexpansion');
+    return $subplugins;
 }

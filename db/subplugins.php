@@ -24,4 +24,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$subplugins = ['supportedmodules' => 'local/townsquaresupport/supportedmodules'];
+$subplugins = [
+    'townsquareexpantion' => 'local/townsquaresupport/townsquareexpansion'
+];

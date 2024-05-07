@@ -14,9 +14,28 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
+defined('MOODLE_INTERNAL') || die;
 
-namespace local_townsquaresupport\plugininfo;
+use local_townsquaresupport\townsquaresupportinterface;
 
-class supportedmodules extends \core\plugininfo\base {
+global $CFG;
+
+
+/**
+ * Plugin strings are defined here.
+ *
+ * @package     townsquareexpansion_tsmoodleoverflow
+ * @copyright   2024 Tamaro Walter
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class tsmoodleoverflow implements townsquaresupportinterface {
+
+    /**
+     * Function from the interface.
+     * @return array
+     */
+    public function get_events(): array {
+        return [];
+    }
 
 }

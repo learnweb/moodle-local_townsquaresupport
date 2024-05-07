@@ -32,7 +32,6 @@
 namespace local_townsquaresupport;
 
 interface townsquaresupportinterface {
-
     /**
      * Function to gather the events
      * Every event must gain sufficient data so that townsquare can build a letter from it.
