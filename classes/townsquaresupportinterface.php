@@ -46,5 +46,5 @@ interface townsquaresupportinterface {
      *
      * @return array of events that can be transformed into letters
      */
-    public function get_events(): array;
+    public static function get_events(): array;
 }

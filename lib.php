@@ -19,35 +19,27 @@ namespace local_townsquaresupport;
 defined('MOODLE_INTERNAL') || die();
 
 /**
+ * Function to get the events from every subplugin that extends the town square.
  *
+ * As every subplugin from townsquaresupport follows the same structure and has the get_event method located in the same
+ * place, this function can access it directly.
  */
 function townsquaresupport_get_subplugin_events() {
-    // Get all available event from townsquaresupport subplugins.
-    /*$event = [
-        'courseid' => 2,
-        'modulename' => 'modulename',
-        'instancename' => 'instancename',
-        'content' => 'HALLO HALLO',
-        'timestart' => time(),
-        'coursemoduleid' => 1,
-        'eventtype' => 'eventtype'
-    ];
-    $event2 = [
-        'courseid' => 2,
-        'modulename' => 'modulename',
-        'instancename' => 'instancename',
-        'content' => 'HALLO TSCHAUUU',
-        'timestart' => time(),
-        'coursemoduleid' => 1,
-        'eventtype' => 'eventtype'
-    ];
-    $events = [$event, $event2];
-    //$subplugins = \core_plugin_manager::instance()->get_plugins_of_type('supportedmodules');
-    //var_dump($subplugins);
-    //foreach ($subplugins as $subplugin) {
-    //    $events += $subplugin->get_events();
-    //}
-    return $events;*/
+
+    // Get all subplugins.
     $subplugins = \core_plugin_manager::instance()->get_plugins_of_type('townsquareexpansion');
-    return $subplugins;
+    $events = [];
+
+    foreach ($subplugins as $subplugin) {
+
+        // Get the class where the get_events method of the subplugin is located.
+        $expansionname = $subplugin->name;
+        $classstring = "\\townsquareexpansion_" . $expansionname . "\\" . $expansionname;
+        $expansionclass = new $classstring();
+
+        // Get the events from the subplugin and add it to the events array.
+        $events = array_merge($events, $expansionclass->get_events());
+
+    }
+    return $events;
 }
