@@ -16,8 +16,6 @@
 
 namespace local_townsquaresupport;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Function to get the events from every subplugin that extends the town square.
  *
