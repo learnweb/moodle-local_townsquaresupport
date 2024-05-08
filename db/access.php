@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Plugin capabilities for the block_townsquare plugin.
+ * Plugin capabilities for the local_townsquaresupport plugin.
  *
- * @package   block_townsquare
- * @copyright 2023 Tamaro Walter
+ * @package   local_townsquaresupport
+ * @copyright 2024 Tamaro Walter
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

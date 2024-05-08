@@ -17,8 +17,8 @@
 /**
  * This file defines the sub-plugins for the townsquare block.
  *
- * @package blocks_townsquare
- * @copyright 2023 Tamaro Walter
+ * @package local_townsquaresupport
+ * @copyright 2024 Tamaro Walter
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

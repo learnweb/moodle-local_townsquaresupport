@@ -24,7 +24,7 @@
  */
 
 /**
- * Execute block_townsquare upgrade from the given old version.
+ * Execute local_townsquare upgrade from the given old version.
  *
  * @param int $oldversion
  * @return bool
