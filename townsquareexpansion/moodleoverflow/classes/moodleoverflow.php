@@ -17,11 +17,11 @@
 /**
  * Core class of the subplugin. This class is accessed by townsquaresupport.
  *
- * @package     townsquareexpansion_tsmoodleoverflow
+ * @package     townsquareexpansion_moodleoverflow
  * @copyright   2024 Tamaro Walter
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace townsquareexpansion_tsmoodleoverflow;
+namespace townsquareexpansion_moodleoverflow;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -33,11 +33,11 @@ require_once($CFG->dirroot . '/blocks/townsquare/locallib.php');
 /**
  * Class that implements the townsquaresupportinterface with the function to get the events from the plugin.
  *
- * @package     townsquareexpansion_tsmoodleoverflow
+ * @package     townsquareexpansion_moodleoverflow
  * @copyright   2024 Tamaro Walter
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class tsmoodleoverflow implements townsquaresupportinterface {
+class moodleoverflow implements townsquaresupportinterface {
 
     /**
      * Function from the interface.

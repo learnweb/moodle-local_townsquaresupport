@@ -17,13 +17,13 @@
 /**
  * Plugin version and other meta-data are defined here.
  *
- * @package     townsquareexpansion_tsmoodleoverflow
+ * @package     townsquareexpansion_moodleoverflow
  * @copyright   2024 Tamaro Walter
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
-$plugin->component = 'townsquareexpansion_tsmoodleoverflow';
+$plugin->component = 'townsquareexpansion_moodleoverflow';
 $plugin->dependencies = ['block_townsquare' => ANY_VERSION];
 $plugin->release = '0.1.0';
 $plugin->version = 2024011503;
