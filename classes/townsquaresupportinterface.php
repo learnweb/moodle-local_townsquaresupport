@@ -31,6 +31,13 @@
  */
 namespace local_townsquaresupport;
 
+/**
+ * Interface that need to be implemented
+ *
+ * @package   local_townsquaresupport
+ * @copyright 2024 Tamaro Walter
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 interface townsquaresupportinterface {
     /**
      * Function to gather the events

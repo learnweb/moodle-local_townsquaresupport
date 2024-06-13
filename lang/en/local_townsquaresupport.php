@@ -25,10 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// Core strings for the installation.
 $string['pluginname'] = 'Townsquare support';
 $string['plugintitle'] = 'Townsquare support plugin';
-
-// Subplugin strings.
 $string['subplugintype_townsquareexpansion'] = 'Townsquare event expansion';
 $string['subplugintype_townsquareexpansion_plural'] = 'Townsquare event expansions';

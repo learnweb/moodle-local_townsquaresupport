@@ -21,6 +21,16 @@ namespace local_townsquaresupport;
  *
  * As every subplugin from townsquaresupport follows the same structure and has the get_event method located in the same
  * place, this function can access it directly.
+ * @package local_townsquaresupport
+ * @copyright   2024 Tamaro Walter
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/**
+ * Core function of the townsquaresupport plugin. Retrieves all events from the subplugins and makes them available
+ * to the townsquare block.
+ *
+ * @return array
  */
 function townsquaresupport_get_subplugin_events() {
 
