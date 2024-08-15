@@ -42,7 +42,7 @@ interface townsquaresupportinterface {
     /**
      * Function to gather the events
      * Every event must gain sufficient data so that townsquare can build a letter from it.
-     * The array should contain following information:
+     * The array must contain following information:
      * [courseid] => int           Course ID from where the content comes from.
      * [modulename] => string      Name of the activity module.
      * [instancename] => string    Name of the instance that shows the notification.
