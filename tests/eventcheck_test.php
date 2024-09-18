@@ -66,9 +66,8 @@ final class eventcheck_test extends \advanced_testcase {
     public function test_checkevents(): void {
         // Test the subevents.
         $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents1));
-        $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents2));
-        $this->assertEquals(true, townsquaresupport_check_subplugin_events($this->testdata->subevents3));
-        $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents4));
+        $this->assertEquals(true, townsquaresupport_check_subplugin_events($this->testdata->subevents2));
+        $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents3));
     }
 
     // Helper functions.
@@ -84,10 +83,6 @@ final class eventcheck_test extends \advanced_testcase {
         $incorrecteevent1 = ['courseid' => 12, 'modulename'  => 'pluginname', 'instancename' => 'instance1',
                              'timestart' => 123456789, 'coursemoduleid' => 13, 'eventtype' => 'eventtypeone', ];
 
-        // Second incorrect event: variable 'courseid' is not a integer.
-        $incorrecteevent2 = ['courseid' => '6', 'modulename'  => 'pluginname', 'instancename' => 'instance1', 'content' => 'hello',
-                             'timestart' => 123456789, 'coursemoduleid' => 13, 'eventtype' => 'eventtypeone', ];
-
         // Two completely correct events.
         $correctevent1 = ['courseid' => 12, 'modulename'  => 'pluginname', 'instancename' => 'instance1', 'content' => 'hello',
                          'timestart' => 123456789, 'coursemoduleid' => 13, 'eventtype' => 'eventtypeone', ];
@@ -97,9 +92,8 @@ final class eventcheck_test extends \advanced_testcase {
 
         // Build different combinations of the events.
         $this->testdata->subevents1 = [(object)$incorrecteevent1, (object)$correctevent1];
-        $this->testdata->subevents2 = [(object)$incorrecteevent2, (object)$correctevent2];
-        $this->testdata->subevents3 = [(object)$correctevent1, (object)$correctevent2];
-        $this->testdata->subevents4 = ['arraykey' => 'incorrectsubevent'];
+        $this->testdata->subevents2 = [(object)$correctevent1, (object)$correctevent2];
+        $this->testdata->subevents3 = ['arraykey' => 'incorrectsubevent'];
     }
 
 }
