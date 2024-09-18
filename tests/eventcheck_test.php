@@ -96,9 +96,9 @@ final class eventcheck_test extends \advanced_testcase {
             'timestart' => 123456787, 'coursemoduleid' => 16, 'eventtype' => 'eventtypeone', ];
 
         // Build different combinations of the events.
-        $this->testdata->subevents1 = [$incorrecteevent1, $correctevent1];
-        $this->testdata->subevents2 = [$incorrecteevent2, $correctevent2];
-        $this->testdata->subevents3 = [$correctevent1, $correctevent2];
+        $this->testdata->subevents1 = [(object)$incorrecteevent1, (object)$correctevent1];
+        $this->testdata->subevents2 = [(object)$incorrecteevent2, (object)$correctevent2];
+        $this->testdata->subevents3 = [(object)$correctevent1, (object)$correctevent2];
         $this->testdata->subevents4 = ['arraykey' => 'incorrectsubevent'];
     }
 

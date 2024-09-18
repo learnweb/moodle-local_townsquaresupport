@@ -29,9 +29,9 @@ namespace local_townsquaresupport;
  * of events have all the required attributes from the townsquaresupport interface.
  *
  * @param array $subevents
- * @return int
+ * @return bool
  */
-function townsquaresupport_check_subplugin_events($subevents): int {
+function townsquaresupport_check_subplugin_events($subevents): bool {
     if (!gettype($subevents == 'array')) {
         return false;
     }
