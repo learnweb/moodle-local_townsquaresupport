@@ -14,13 +14,28 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace local_townsquaresupport;
-
 /**
  * Function to get the events from every subplugin that extends the town square.
  *
  * As every subplugin from townsquaresupport follows the same structure and has the get_event method located in the same
  * place, this function can access it directly.
+ * @package     local_townsquaresupport
+ * @copyright   2024 Tamaro Walter
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+namespace local_townsquaresupport;
+
+defined('MOODLE_INTERNAL') || die();
+
+global $CFG;
+require_once($CFG->dirroot . '/local/townsquaresupport/locallib.php');
+
+/**
+ * Core function of the townsquaresupport plugin. Retrieves all events from the subplugins and makes them available
+ * to the townsquare block.
+ *
+ * @return array
  */
 function townsquaresupport_get_subplugin_events() {
 
@@ -35,8 +50,16 @@ function townsquaresupport_get_subplugin_events() {
         $classstring = "\\townsquareexpansion_" . $expansionname . "\\" . $expansionname;
         $expansionclass = new $classstring();
 
-        // Get the events from the subplugin and add it to the events array.
-        $events = array_merge($events, $expansionclass->get_events());
+        // Get the events from the subplugin.
+        $subpluginevents = $expansionclass->get_events();
+
+        // Check if the events meet the requirements of the interface.
+        if (townsquaresupport_check_subplugin_events($subpluginevents)) {
+            $events = array_merge($events, $subpluginevents);
+        } else {
+            // Throw an error as there is an error in the subplugin code.
+            throw new \moodle_exception('subpluginerror', 'local_townsquaresupport', '', ['subpluginname' => $expansionname]);
+        }
 
     }
     return $events;

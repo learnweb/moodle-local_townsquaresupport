@@ -25,10 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// Core strings for the installation.
-$string['pluginname'] = 'Townsquare support plugin';
 $string['pluginname'] = 'Townsquare support';
-
-// Subplugin strings.
+$string['plugintitle'] = 'Townsquare support plugin';
+$string['subpluginerror'] = 'Error while retrieving events from an subplugin. There seems to be a coding error in the subplugin {$a->subpluginname}.';
 $string['subplugintype_townsquareexpansion'] = 'Townsquare event expansion';
 $string['subplugintype_townsquareexpansion_plural'] = 'Townsquare event expansions';

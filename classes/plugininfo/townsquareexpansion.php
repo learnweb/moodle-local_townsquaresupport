@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * TODO: Add description.
+ * File to manage subplugins from type townsquareexpansion.
  *
  * @package     local_townsquaresupport
  * @copyright   2024 Tamaro Walter
@@ -36,7 +36,7 @@ class townsquareexpansion extends base {
      * @return bool
      */
     public function is_uninstall_allowed(): bool {
-        return true;
+        return true; // A subplugin can be deleted without condition.
     }
 
     /**

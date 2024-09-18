@@ -31,11 +31,18 @@
  */
 namespace local_townsquaresupport;
 
+/**
+ * Interface that need to be implemented
+ *
+ * @package   local_townsquaresupport
+ * @copyright 2024 Tamaro Walter
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 interface townsquaresupportinterface {
     /**
      * Function to gather the events
      * Every event must gain sufficient data so that townsquare can build a letter from it.
-     * The array should contain following information:
+     * The array must contain following information:
      * [courseid] => int           Course ID from where the content comes from.
      * [modulename] => string      Name of the activity module.
      * [instancename] => string    Name of the instance that shows the notification.
