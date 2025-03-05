@@ -48,6 +48,7 @@ final class eventcheck_test extends \advanced_testcase {
     // Construct functions.
 
     public function setUp(): void {
+        parent::setUp();
         $this->testdata = new \stdClass();
         $this->resetAfterTest();
         $this->helper_test_set_up();
@@ -55,6 +56,7 @@ final class eventcheck_test extends \advanced_testcase {
 
     public function tearDown(): void {
         $this->testdata = null;
+        parent::tearDown();
     }
 
     // Tests.
