@@ -2,8 +2,6 @@
 
 ### 📋 Kind of PR 
 
-- [ ] Fixes a bug
-- [ ] Updates for a new Moodle version
 - [ ] Adds a new feature of functionality
 - [ ] Improves or enhances existing features
 - [ ] Refactoring: restructures code for better performance or maintainability

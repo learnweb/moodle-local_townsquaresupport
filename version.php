@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->component = 'local_townsquaresupport';
 $plugin->dependencies = ['block_townsquare' => ANY_VERSION];
 $plugin->release = '0.1.0';
-$plugin->version = 2024070300;
+$plugin->version = 2024062400;
 $plugin->requires = 2022041900;
 $plugin->maturity = MATURITY_ALPHA;
