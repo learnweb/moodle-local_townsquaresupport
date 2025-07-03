@@ -1,7 +1,7 @@
 # Townsquare Support #
 
-A moodle local plugin that manages the subplugins for the moodle townsquare block.
-Documentation of the townsquare block: https://github.com/learnweb/moodle-block_townsquare
+A moodle local plugin that manages the subplugins for the moodle [townsquare](https://github.com/learnweb/moodle-block_townsquare)
+block.
 
 ## How to install a subplugin ##
 
