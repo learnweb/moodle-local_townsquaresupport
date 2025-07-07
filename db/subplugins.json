@@ -1,5 +1,8 @@
 {
+  "subplugintypes": {
+    "townsquareexpansion": "townsquareexpansion"
+  },
   "plugintypes": {
-    "townsquareexpansion": "local\/townsquaresupport\/townsquareexpansion"
+    "townsquareexpansion": "local/townsquaresupport/townsquareexpansion"
   }
 }

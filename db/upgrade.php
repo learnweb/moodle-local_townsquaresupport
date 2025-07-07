@@ -29,7 +29,7 @@
  * @param int $oldversion
  * @return bool
  */
-function xmldb_local_townsquaresupport_upgrade($oldversion) {
+function xmldb_local_townsquaresupport_upgrade(int $oldversion): bool {
     global $DB;
 
     $dbman = $DB->get_manager();
