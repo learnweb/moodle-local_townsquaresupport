@@ -56,6 +56,8 @@ Alternatively, you can run
 
 to complete the installation from the command line.
 
+---
+
 ## License ##
 
 2024 Tamaro Walter
