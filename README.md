@@ -29,7 +29,7 @@ To implement a subplugin for townsquare, the subplugins needs to meet the follow
    subplugin can make notifications available for the townsquare block.
 
 > For more information read the [developer documentation](https://github.com/learnweb/moodle-local_townsquaresupport/wiki/Documentation-for-developers).
-> Examples of existing subplugins can be found [here](https://github.com/learnweb/moodle-local_townsquaresupport/wiki/List-of-approved-Subplugins)
+> Examples of existing subplugins can be found [here](https://github.com/learnweb/moodle-local_townsquaresupport/wiki/List-of-approved-Subplugins).
 
 ---
 
