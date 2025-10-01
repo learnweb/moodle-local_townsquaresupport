@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+v5.0-r2 (2025-10-01)
+------------------
+- Improve the Readme file.
+
 v5.0-r1 (2025-06-24)
 ------------------
 - Update for Moodle 5.0
