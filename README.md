@@ -1,25 +1,17 @@
 # Townsquare Support #
 
-A moodle local plugin that manages the subplugins for the moodle [townsquare](https://github.com/learnweb/moodle-block_townsquare)
+A moodle local plugin that manages the subplugins for the [townsquare](https://github.com/learnweb/moodle-block_townsquare)
 block.
 
 ## How to install a subplugin ##
 
-To install a townsquare subplugin, clone the repository of the subplugin into the
+To install a townsquare subplugin, clone the repository of the subplugin into the following directory:
 
-`{your/moodle/dirroot}/local/townsquaresupport/townsquareexpansion/{pluginname}
-`
-
-directory.
+`{your/moodle/dirroot}/local/townsquaresupport/townsquareexpansion/{pluginname}`
 
 Afterwards, log in to your Moodle site as an admin and go to _Site administration >
 Notifications_ to complete the installation.
-
-Alternatively, you can run
-
-    $ php admin/cli/upgrade.php
-
-to complete the installation from the command line.
+Alternatively, you can run `$ php admin/cli/upgrade.php` to complete the installation from the command line.
 
 ## How to implement a subplugin ##
 
@@ -35,6 +27,11 @@ To implement a subplugin for townsquare, the subplugins needs to meet the follow
    The most important file is the `{pluginname}` class. This class needs to implement the `townsquaresupportinterface` located in
    `{your/moodle/dirroot}/local/townsquaresupport/classes/townsquaresupportinterface.php.`. By implementing the interface, the
    subplugin can make notifications available for the townsquare block.
+
+> For more information read the [developer documentation](https://github.com/learnweb/moodle-local_townsquaresupport/wiki/Documentation-for-developers).
+> Examples of existing subplugins can be found [here](https://github.com/learnweb/moodle-local_townsquaresupport/wiki/List-of-approved-Subplugins).
+
+---
 
 ## Installing via uploaded ZIP file ##
 
@@ -58,6 +55,8 @@ Alternatively, you can run
     $ php admin/cli/upgrade.php
 
 to complete the installation from the command line.
+
+---
 
 ## License ##
 
