@@ -37,14 +37,13 @@ require_once($CFG->dirroot . '/local/townsquaresupport/locallib.php');
  *
  * @return array
  */
-function townsquaresupport_get_subplugin_events() {
+function local_townsquaresupport_get_subplugin_events() {
 
     // Get all subplugins.
     $subplugins = \core_plugin_manager::instance()->get_plugins_of_type('townsquareexpansion');
     $events = [];
 
     foreach ($subplugins as $subplugin) {
-
         // Get the class where the get_events method of the subplugin is located.
         $expansionname = $subplugin->name;
         $classstring = "\\townsquareexpansion_" . $expansionname . "\\" . $expansionname;
@@ -54,13 +53,12 @@ function townsquaresupport_get_subplugin_events() {
         $subpluginevents = $expansionclass->get_events();
 
         // Check if the events meet the requirements of the interface.
-        if (townsquaresupport_check_subplugin_events($subpluginevents)) {
+        if (local_townsquaresupport_check_subplugin_events($subpluginevents)) {
             $events = array_merge($events, $subpluginevents);
         } else {
             // Throw an error as there is an error in the subplugin code.
             throw new \moodle_exception('subpluginerror', 'local_townsquaresupport', '', ['subpluginname' => $expansionname]);
         }
-
     }
     return $events;
 }

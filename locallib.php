@@ -31,7 +31,7 @@ namespace local_townsquaresupport;
  * @param array $subevents
  * @return bool
  */
-function townsquaresupport_check_subplugin_events($subevents): bool {
+function local_townsquaresupport_check_subplugin_events($subevents): bool {
     if (!gettype($subevents == 'array')) {
         return false;
     }
@@ -40,7 +40,6 @@ function townsquaresupport_check_subplugin_events($subevents): bool {
         // If no events are available, then everything is okay.
         return true;
     } else {
-
         // Check every event.
         foreach ($subevents as $event) {
             if (gettype($event) != 'object') {
@@ -48,13 +47,13 @@ function townsquaresupport_check_subplugin_events($subevents): bool {
             }
 
             // Check if all variables are set.
-            $issetcheck = townsquaresupport_check_isset($event, 'courseid') &&
-                townsquaresupport_check_isset($event, 'modulename') &&
-                townsquaresupport_check_isset($event, 'instancename') &&
-                townsquaresupport_check_isset($event, 'content') &&
-                townsquaresupport_check_isset($event, 'timestart') &&
-                townsquaresupport_check_isset($event, 'coursemoduleid') &&
-                townsquaresupport_check_isset($event, 'eventtype');
+            $issetcheck = local_townsquaresupport_check_isset($event, 'courseid') &&
+                local_townsquaresupport_check_isset($event, 'modulename') &&
+                local_townsquaresupport_check_isset($event, 'instancename') &&
+                local_townsquaresupport_check_isset($event, 'content') &&
+                local_townsquaresupport_check_isset($event, 'timestart') &&
+                local_townsquaresupport_check_isset($event, 'coursemoduleid') &&
+                local_townsquaresupport_check_isset($event, 'eventtype');
 
             if (!$issetcheck) {
                 return false;
@@ -71,6 +70,6 @@ function townsquaresupport_check_subplugin_events($subevents): bool {
  * @param string $variablename      Name of the variable
  * @return bool
  */
-function townsquaresupport_check_isset($event, $variablename): bool {
+function local_townsquaresupport_check_isset($event, $variablename): bool {
     return isset($event->$variablename);
 }

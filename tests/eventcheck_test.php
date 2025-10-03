@@ -38,7 +38,6 @@ require_once($CFG->dirroot . '/local/townsquaresupport/locallib.php');
  * @covers ::\local_townsquaresupport\townsquaresupport_check_subplugin_events()
  */
 final class eventcheck_test extends \advanced_testcase {
-
     // Attributes.
 
     /** @var object The data that will be used for testing */
@@ -67,9 +66,9 @@ final class eventcheck_test extends \advanced_testcase {
      */
     public function test_checkevents(): void {
         // Test the subevents.
-        $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents1));
-        $this->assertEquals(true, townsquaresupport_check_subplugin_events($this->testdata->subevents2));
-        $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents3));
+        $this->assertEquals(false, local_townsquaresupport_check_subplugin_events($this->testdata->subevents1));
+        $this->assertEquals(true, local_townsquaresupport_check_subplugin_events($this->testdata->subevents2));
+        $this->assertEquals(false, local_townsquaresupport_check_subplugin_events($this->testdata->subevents3));
     }
 
     // Helper functions.
@@ -97,5 +96,4 @@ final class eventcheck_test extends \advanced_testcase {
         $this->testdata->subevents2 = [(object)$correctevent1, (object)$correctevent2];
         $this->testdata->subevents3 = ['arraykey' => 'incorrectsubevent'];
     }
-
 }
