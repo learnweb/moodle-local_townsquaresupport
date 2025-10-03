@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+v5.0-r3 (2025-10-03)
+------------------
+- Add changes required to publish the plugin.
+
 v5.0-r2 (2025-10-01)
 ------------------
 - Improve the Readme file.
