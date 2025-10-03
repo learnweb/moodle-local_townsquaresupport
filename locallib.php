@@ -40,7 +40,6 @@ function local_townsquaresupport_check_subplugin_events($subevents): bool {
         // If no events are available, then everything is okay.
         return true;
     } else {
-
         // Check every event.
         foreach ($subevents as $event) {
             if (gettype($event) != 'object') {

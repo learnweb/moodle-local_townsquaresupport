@@ -22,11 +22,16 @@
  */
 namespace local_townsquaresupport\privacy;
 
-
+/**
+ * Class that describes what type of data is stored in the plugin.
+ *
+ * @package   local_townsquaresupport
+ * @copyright 2025 Tamaro Walter
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class provider implements
     // This plugin does not store any personal user data.
     \core_privacy\local\metadata\null_provider {
-
     /**
      * Get the language string identifier with the component's language
      * file to explain why this plugin stores no data.

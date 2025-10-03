@@ -29,7 +29,6 @@ use core\plugininfo\base;
  * The functions for all sub-plugins of type townsquaresupport.
  */
 class townsquareexpansion extends base {
-
     /**
      * Return if a subplugin is allowed to be deleted.
      *
@@ -67,4 +66,3 @@ class townsquareexpansion extends base {
         }
     }
 }
-

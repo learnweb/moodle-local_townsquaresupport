@@ -44,7 +44,6 @@ function local_townsquaresupport_get_subplugin_events() {
     $events = [];
 
     foreach ($subplugins as $subplugin) {
-
         // Get the class where the get_events method of the subplugin is located.
         $expansionname = $subplugin->name;
         $classstring = "\\townsquareexpansion_" . $expansionname . "\\" . $expansionname;
@@ -60,7 +59,6 @@ function local_townsquaresupport_get_subplugin_events() {
             // Throw an error as there is an error in the subplugin code.
             throw new \moodle_exception('subpluginerror', 'local_townsquaresupport', '', ['subpluginname' => $expansionname]);
         }
-
     }
     return $events;
 }
