@@ -24,10 +24,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2024062401;
+$plugin->version = 2024062402;
 $plugin->requires = 2022112819; // Require Moodle 4.1.
 $plugin->supported = [401, 500];
 $plugin->component = 'local_townsquaresupport';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v5.0-r2';
-$plugin->dependencies = ['block_townsquare' => ANY_VERSION];
+$plugin->release = 'v5.0-r3';
+$plugin->dependencies = ['block_townsquare' => 2025073102];
