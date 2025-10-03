@@ -66,9 +66,9 @@ final class eventcheck_test extends \advanced_testcase {
      */
     public function test_checkevents(): void {
         // Test the subevents.
-        $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents1));
-        $this->assertEquals(true, townsquaresupport_check_subplugin_events($this->testdata->subevents2));
-        $this->assertEquals(false, townsquaresupport_check_subplugin_events($this->testdata->subevents3));
+        $this->assertEquals(false, local_townsquaresupport_check_subplugin_events($this->testdata->subevents1));
+        $this->assertEquals(true, local_townsquaresupport_check_subplugin_events($this->testdata->subevents2));
+        $this->assertEquals(false, local_townsquaresupport_check_subplugin_events($this->testdata->subevents3));
     }
 
     // Helper functions.
