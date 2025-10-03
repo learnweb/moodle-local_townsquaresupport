@@ -30,3 +30,4 @@ $string['plugintitle'] = 'Townsquare support plugin';
 $string['subpluginerror'] = 'Error while retrieving events from an subplugin. There seems to be a coding error in the subplugin {$a->subpluginname}.';
 $string['subplugintype_townsquareexpansion'] = 'Townsquare event expansion';
 $string['subplugintype_townsquareexpansion_plural'] = 'Townsquare event expansions';
+$string['privacy:metadata'] = 'The Townsquaresupport plugin does not store any data. It only manages subplugins that only display existing data.';
