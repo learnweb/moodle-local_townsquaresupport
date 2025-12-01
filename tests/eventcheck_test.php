@@ -23,6 +23,8 @@
  */
 namespace local_townsquaresupport;
 
+use stdClass;
+
 defined('MOODLE_INTERNAL') || die();
 
 global $CFG;
@@ -40,22 +42,17 @@ require_once($CFG->dirroot . '/local/townsquaresupport/locallib.php');
 final class eventcheck_test extends \advanced_testcase {
     // Attributes.
 
-    /** @var object The data that will be used for testing */
-    private $testdata;
+    /** @var stdClass The data that will be used for testing */
+    private stdClass $testdata;
 
 
     // Construct functions.
 
     public function setUp(): void {
         parent::setUp();
-        $this->testdata = new \stdClass();
+        $this->testdata = new stdClass();
         $this->resetAfterTest();
         $this->helper_test_set_up();
-    }
-
-    public function tearDown(): void {
-        $this->testdata = null;
-        parent::tearDown();
     }
 
     // Tests.
@@ -66,9 +63,9 @@ final class eventcheck_test extends \advanced_testcase {
      */
     public function test_checkevents(): void {
         // Test the subevents.
-        $this->assertEquals(false, local_townsquaresupport_check_subplugin_events($this->testdata->subevents1));
-        $this->assertEquals(true, local_townsquaresupport_check_subplugin_events($this->testdata->subevents2));
-        $this->assertEquals(false, local_townsquaresupport_check_subplugin_events($this->testdata->subevents3));
+        $this->assertFalse(local_townsquaresupport_check_subplugin_events($this->testdata->subevents1));
+        $this->assertTrue(local_townsquaresupport_check_subplugin_events($this->testdata->subevents2));
+        $this->assertFalse(local_townsquaresupport_check_subplugin_events($this->testdata->subevents3));
     }
 
     // Helper functions.

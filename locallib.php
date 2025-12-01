@@ -31,7 +31,7 @@ namespace local_townsquaresupport;
  * @param array $subevents
  * @return bool
  */
-function local_townsquaresupport_check_subplugin_events($subevents): bool {
+function local_townsquaresupport_check_subplugin_events(array $subevents): bool {
     if (!gettype($subevents == 'array')) {
         return false;
     }
@@ -70,6 +70,6 @@ function local_townsquaresupport_check_subplugin_events($subevents): bool {
  * @param string $variablename      Name of the variable
  * @return bool
  */
-function local_townsquaresupport_check_isset($event, $variablename): bool {
+function local_townsquaresupport_check_isset(array $event, string $variablename): bool {
     return isset($event->$variablename);
 }

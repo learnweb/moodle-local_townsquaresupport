@@ -26,6 +26,8 @@
 
 namespace local_townsquaresupport;
 
+use moodle_exception;
+
 defined('MOODLE_INTERNAL') || die();
 
 global $CFG;
@@ -36,8 +38,9 @@ require_once($CFG->dirroot . '/local/townsquaresupport/locallib.php');
  * to the townsquare block.
  *
  * @return array
+ * @throws moodle_exception
  */
-function local_townsquaresupport_get_subplugin_events() {
+function local_townsquaresupport_get_subplugin_events(): array {
 
     // Get all subplugins.
     $subplugins = \core_plugin_manager::instance()->get_plugins_of_type('townsquareexpansion');
@@ -57,7 +60,7 @@ function local_townsquaresupport_get_subplugin_events() {
             $events = array_merge($events, $subpluginevents);
         } else {
             // Throw an error as there is an error in the subplugin code.
-            throw new \moodle_exception('subpluginerror', 'local_townsquaresupport', '', ['subpluginname' => $expansionname]);
+            throw new moodle_exception('subpluginerror', 'local_townsquaresupport', '', ['subpluginname' => $expansionname]);
         }
     }
     return $events;
