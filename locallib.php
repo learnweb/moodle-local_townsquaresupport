@@ -24,6 +24,8 @@
 
 namespace local_townsquaresupport;
 
+use stdClass;
+
 /**
  * Helper function for townsquaresupport_get_subplugin_events, that checks if an amount
  * of events have all the required attributes from the townsquaresupport interface.
@@ -66,10 +68,10 @@ function local_townsquaresupport_check_subplugin_events(array $subevents): bool 
 /**
  * Helper function for check_subplugin_events function that proves if a variable is set in an array.
  *
- * @param array $event              Event that is checked.
+ * @param stdClass $event              Event that is checked.
  * @param string $variablename      Name of the variable
  * @return bool
  */
-function local_townsquaresupport_check_isset(array $event, string $variablename): bool {
+function local_townsquaresupport_check_isset(stdClass $event, string $variablename): bool {
     return isset($event->$variablename);
 }
