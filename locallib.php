@@ -34,44 +34,24 @@ use stdClass;
  * @return bool
  */
 function local_townsquaresupport_check_subplugin_events(array $subevents): bool {
-    if (!gettype($subevents == 'array')) {
-        return false;
-    }
-
-    if ($subevents == []) {
+    if (empty($subevents)) {
         // If no events are available, then everything is okay.
         return true;
-    } else {
-        // Check every event.
-        foreach ($subevents as $event) {
-            if (gettype($event) != 'object') {
-                return false;
-            }
+    }
 
-            // Check if all variables are set.
-            $issetcheck = local_townsquaresupport_check_isset($event, 'courseid') &&
-                local_townsquaresupport_check_isset($event, 'modulename') &&
-                local_townsquaresupport_check_isset($event, 'instancename') &&
-                local_townsquaresupport_check_isset($event, 'content') &&
-                local_townsquaresupport_check_isset($event, 'timestart') &&
-                local_townsquaresupport_check_isset($event, 'coursemoduleid') &&
-                local_townsquaresupport_check_isset($event, 'eventtype');
+    // Check every event.
+    foreach ($subevents as $event) {
+        if (!is_object($event)) {
+            return false;
+        }
 
-            if (!$issetcheck) {
+        // Check if all variables are set.
+        $required = ['courseid', 'modulename', 'instancename', 'content', 'timestart', 'coursemoduleid', 'eventtype'];
+        foreach ($required as $attribute) {
+            if (!isset($event->$attribute)) {
                 return false;
             }
         }
     }
     return true;
-}
-
-/**
- * Helper function for check_subplugin_events function that proves if a variable is set in an array.
- *
- * @param stdClass $event              Event that is checked.
- * @param string $variablename      Name of the variable
- * @return bool
- */
-function local_townsquaresupport_check_isset(stdClass $event, string $variablename): bool {
-    return isset($event->$variablename);
 }
