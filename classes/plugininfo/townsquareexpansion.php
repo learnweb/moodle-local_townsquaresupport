@@ -24,7 +24,10 @@
 
 namespace local_townsquaresupport\plugininfo;
 
+use admin_settingpage;
 use core\plugininfo\base;
+use part_of_admin_tree;
+
 /**
  * The functions for all sub-plugins of type townsquaresupport.
  */
@@ -42,11 +45,11 @@ class townsquareexpansion extends base {
      * Checks whether sub-plugins have settings.php and adds them to the admin menu.
      * In Case a sub-plugin is added the settings.php has to include all global variables it needs.
      *
-     * @param \part_of_admin_tree $adminroot
+     * @param part_of_admin_tree $adminroot
      * @param string $parentnodename
      * @param bool $hassiteconfig
      */
-    public function load_settings(\part_of_admin_tree $adminroot, $parentnodename, $hassiteconfig) {
+    public function load_settings(part_of_admin_tree $adminroot, $parentnodename, $hassiteconfig): void {
         $ADMIN = $adminroot; // May be used in settings.php.
 
         if (!$this->is_installed_and_upgraded()) {
